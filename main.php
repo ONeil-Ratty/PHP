@@ -127,14 +127,206 @@
         $num=$_GET["cubeMe"];
 
         function cubeMe($num){
-            return $num**3;
+            // this line keeps crashing the if statement
+
+            // return $num**3;
 
         }
-        
-        $cubeResult=cubeMe($num);
-        
-        echo $cubeResult;
+        echo cubeMe($num);
     ?>
+
+    <br>
+    <hr>
+    <h1>If statements</h1>
+    <h4>True or False questions</h4>
+    <form action="main.php" method="get">
+       Are you male? <input type="text" name="male"><br>
+       Are you tall? <input type="text" name="tall"><br>
+        <input type="submit">
+    </form>
+    
+    <?php 
+    $male = strtolower($_GET["male"]);
+    $tall = strtolower($_GET["tall"]);
+    if ($male === "true" && $tall === "true"){
+        echo "you are male and tall";
+
+    }elseif($male === "true" && $tall === "false"){
+        echo "you are a short male";
+
+    }
+    elseif($male === "false" && $tall === "true"){
+        echo "you are not a male however you are tall";
+
+    }
+    else{
+        echo "you are not male and not tall";
+
+    }
+    
+    ?>
+
+    <br>
+    <hr>
+    <h1>If statements (con't)</h1>
+    <h4>which number is greater</h4>
+    <form action="main.php" method="get">
+        <input type="number" name="num1"><br>
+        <input type="number" name="num2"><br>
+        <input type="number" name="num3"><br>
+        <input type="submit">
+    </form>
+    <?php 
+        $num1 = $_GET["num1"];
+        $num2 = $_GET["num2"];
+        $num3 = $_GET["num3"];
+        function getMax($num1,$num2,$num3){
+            if($num1>=$num2 && $num1>=$num3){
+
+                return $num1;
+
+            }
+            elseif($num2>=$num1 && $num2>=$num3){
+                return $num2;
+
+            }
+            else{
+                return $num3;
+            }
+        }
+
+        echo getMax($num1,$num2,$num3);
+    
+    ?>
+    <br>
+    <hr>
+    <h1>4 operation Calculator</h1>
+    <form action="main.php" method="post">
+        First number:<input type="number" name="1num"><br>
+        Operation:<input type="text" name="operator"><br>
+        Second number:<input type="number" name="2num"><br>
+        <input type="submit">
+    </form>
+    <?php
+        $num1st=$_POST["1num"];
+        $num2nd=$_POST["2num"];
+        $op=$_POST["operator"];
+
+            if ($op=="+"){
+
+                echo $num1st+$num2nd;
+
+            }
+            elseif ($op=="*"){
+
+                echo $num1st*$num2nd;
+
+            }
+            elseif ($op=="-"){
+
+                echo $num1st-$num2nd;
+
+            }
+            elseif ($op=="/"){
+
+                echo $num1st/$num2nd;
+
+            }
+
+    
+    
+    ?>
+    <br>
+    <hr>
+    <h1>Switch Statements</h1>
+    <h4>Enter grades: A,B,C,D,F</h4>
+    <form action="main.php" method="get">
+        <input type="text" name="grade">
+        <input type="submit">
+    </form>
+    <?php
+        $grade=strtoupper($_GET["grade"]);
+        switch($grade){
+            case "A":
+                echo "you did amazing!!";
+            break;
+            
+            case "B":
+                echo "you did good";
+            break;
+
+            case "C":
+                echo "you did okay, work harder";
+            break;
+
+            case "D":
+                echo "you did not do well, work extra hard";
+            break;
+
+            case "F":
+                echo "you FAILED!!!";
+                break;
+            
+            default:
+                echo "Invalid grade";
+
+        }
+    
+    
+    
+    ?>
+    <br>
+    <hr>
+    <h1>While Loops</h1>
+    <form action="main.php" method="get">
+        <input type="number" name="loop">
+        <input type="submit">
+    </form>
+    <?php 
+        $loop=$_GET["loop"];
+
+        while($loop<=5){
+            echo "$loop <br>";
+            $loop++;
+        }
+
+    ?>
+    <br>
+    <hr>
+    <h1>Do while loops</h1>
+    <form action="main.php" method="get">
+        <input type="number" name="doWhileLoop"><br>
+        <input type="submit">
+    </form>
+    <?php 
+        $doWhileLoop=$_GET["doWhileLoop"];
+
+        do{
+            echo "$doWhileLoop <br>";
+            $doWhileLoop++;
+
+        }while($doWhileLoop <= 5)
+    
+    
+    ?>
+    <br>
+    <hr>
+    <h1>For Loops</h1>
+    <form action="main.php" method="get">
+        <input type="number" name="forLoop"><br>
+        <input type="submit">
+    </form>
+    <?php 
+        $myBooks=array("Harry Potter","To kill a mocking bird","Lord of the rings","Fire and Ice");
+        for ($forLoop=$_GET["forLoop"];$forLoop < count($myBooks);$forLoop++){
+        echo "$myBooks[$forLoop] <br>";
+     }
+    
+    ?>
+
+
+
+
 
 </body>
 </html>
