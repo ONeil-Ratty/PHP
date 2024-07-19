@@ -323,10 +323,81 @@
      }
     
     ?>
+    <br>
+    <hr>
+   <h1>Objects and classes && Constructers && Object functions</h1>
+   <h5>Enter name of the listed author to bring up their most sold book</h5>
+   <h4>List of Authors:<br> Jk rowling<br>Tolkien<br>R.R Martin<br>Shakespear</h4><br>
+    <form action="main.php" method="post">
+        Name of Author:<input type="text" name="nameOfAuthor">
+        <input type="submit"><br>
+
+    <?php
+    $nameOfAuthor=strtolower($_POST["nameOfAuthor"]);
+
+    class Book{
+        public $title;
+        public $author;
+        public $page;
+        public $available;
+
+        function __construct($aTitle,$aAuthor,$aPage,$availability){
+            $this->title=$aTitle;
+            $this->author=$aAuthor;
+            $this->page=$aPage;
+            $this->available=$availability;
+        }
+        
+        function available(){
+            if ($this->available=="yes"){
+
+                echo "it is available";
+
+            }
+                else{
+                    return "it is not available";
 
 
+                }
+        }
+            
+    }
+    $book1= new Book("Harry Potter <br>","Jk Rowling <br>",400,"yes");
+    $book2= new Book("Lord Of The Rings <br>","Tolkien <br>",700,"no");
+    $book3= new Book("Game of thrones <br>","R.R Martin <br>",1000,"yes");
+    $book4= new Book("Romeo and Juliet <br>","Shakespear <br>",150,"yes");
 
+    if ($nameOfAuthor=="jk rowling"){
+      echo "Author: ",$book1->author;
+      echo "Title: ",$book1->title;
+      echo "Pages: ",$book1->page;
+      echo "<br>Availability: ",$book1->available();
+    }
+        elseif($nameOfAuthor=="tolkien"){
+            echo "Author: ",$book2->author;
+            echo "Title: ",$book2->title;
+            echo "Pages: ",$book2->page;
+            echo "<br>Availability: ",$book2->available();
+        }
+            elseif($nameOfAuthor=="r.r martin"){
+                echo "Author: ",$book3->author;
+                echo "Title: ",$book3->title;
+                echo "Pages: ",$book3->page;
+                echo "<br>Availability: ",$book3->available();
+            }
+                elseif($nameOfAuthor=="shakespear"){
+                    echo "Author: ",$book4->author;
+                    echo "Title: ",$book4->title;
+                    echo "Pages: ",$book4->page;
+                    echo "<br>Availability: ",$book4->available();
+                }
+                    else{
+                        echo "invalid Author";
+                    }
 
+    
 
+    ?>
+   
 </body>
 </html>
