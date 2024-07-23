@@ -1,4 +1,5 @@
 <?php
+include "main.php";
 include "autoloader/autoloader.auto.php";
 ?>
 <!DOCTYPE html>
@@ -9,6 +10,8 @@ include "autoloader/autoloader.auto.php";
     <title>Document</title>
 </head>
 <body>
+<br>
+<hr>
 <h1> Choose your pet </h1>
 <form action = "index.php" method = "get">
    Your name: <input type="text" name = "name"><br>
