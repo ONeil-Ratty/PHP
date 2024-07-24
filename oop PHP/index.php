@@ -1,5 +1,7 @@
 <?php
-include "main.php";
+// Delcare the strict type to true
+// declare (strict_type = 1)
+
 include "autoloader/autoloader.auto.php";
 ?>
 <!DOCTYPE html>
@@ -33,6 +35,29 @@ include "autoloader/autoloader.auto.php";
     echo "<br>Age :",Pet::$ageOfPet;
 
  ?>
+ <br>
+ <hr>
+ <h1> My Calculaor </h1>
+ <form action ="index.php" method ="get">
+   <input type ="number" name="num1" placeholder = "myFirstNumber">
+   <select name="operation">
+      <option value = "add">Addition</option>
+      <option value = "multi">Multiplication</option>
+      <option value = "div">Division</option>
+      <option value = "sub">Subtraction</option>
+   </select>
+   <input type ="number" name ="num2" placeholder ="mySecondNumber">
+   <input type ="submit">
+</form>
+<?php
+$num1=$_GET["num1"];
+$operation=$_GET["operation"];
+$num2=$_GET["num2"];
+
+$calculator = new calc($num1,$operation,$num2);
+echo $calculator->calculator();
+
+?>
 
 
 
