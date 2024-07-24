@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Madlib Game</h1>
-    <form action="main.php" method="get">
+    <form action="index.php" method="get">
         Group of people: <input type="Text" name="groupOfPeople" id="group of people"><br>
         place: <input type="Text" name="place" id="place"><br>
         verb: <input type="Text" name="verb" id="verb"><br>
@@ -33,7 +33,7 @@
 
     <!-- Url parameters -->
      <h1>Url Parameters (safe) </h1>
-    <form action="main.php" method="post">
+    <form action="index.php" method="post">
         password: <input type="password" name="password">
 
         <input type="submit">
@@ -47,7 +47,7 @@
     <hr>
     <h1>Pick between an <i>ARRAY</i> of cars </h1>
     <p>porch = 0<br>VW = 1<br>Toyota=2<p>
-    <form action="main.php" method="get">
+    <form action="index.php" method="get">
         <input type="number" name="numberInArray">
         <input type="submit">
     </form>
@@ -61,7 +61,7 @@
     <br>
     <hr>
     <h1>CheckBoxes</h1>
-    <form action="main.php" method="post">
+    <form action="index.php" method="post">
        Apples: <input type="checkbox" name="fruits[]" value="apples"><br>
        Pears: <input type="checkbox" name="fruits[]" value="pears"><br>
        Bananas: <input type="checkbox" name="fruits[]" value="bananas"><br>
@@ -81,7 +81,7 @@
     <h5>names of leaners</h5>
     <p>Tom<br>Angela<br>Denace<br>Joseph<p>
 
-    <form action="main.php" method="get">
+    <form action="index.php" method="get">
         <input type="text" name="nameOfLearner">
         <input type="submit">
     </form>
@@ -95,7 +95,7 @@
     <br>
     <hr>
     <h1><i>FUN</i>ctions</h1>
-    <form action="main.php" method="get">
+    <form action="index.php" method="get">
         Name: <input type="text" name="name"><br>
         Age: <input type="text" name="age"><br>
         
@@ -118,7 +118,7 @@
     <hr>
     <h1>Return Statememts</h1>
     <h5>Cube me</h5>
-    <form action="main.php" method="get">
+    <form action="index.php" method="get">
         <input type="number" name="cubeMe">
         <input type="submit">
         <br>
@@ -139,7 +139,7 @@
     <hr>
     <h1>If statements</h1>
     <h4>True or False questions</h4>
-    <form action="main.php" method="get">
+    <form action="index.php" method="get">
        Are you male? <input type="text" name="male"><br>
        Are you tall? <input type="text" name="tall"><br>
         <input type="submit">
@@ -170,7 +170,7 @@
     <hr>
     <h1>If statements (con't)</h1>
     <h4>which number is greater</h4>
-    <form action="main.php" method="get">
+    <form action="index.php" method="get">
         <input type="number" name="num1"><br>
         <input type="number" name="num2"><br>
         <input type="number" name="num3"><br>
@@ -201,7 +201,7 @@
     <br>
     <hr>
     <h1>4 operation Calculator</h1>
-    <form action="main.php" method="post">
+    <form action="index.php" method="post">
         First number:<input type="number" name="1num"><br>
         Operation:<input type="text" name="operator"><br>
         Second number:<input type="number" name="2num"><br>
@@ -240,7 +240,7 @@
     <hr>
     <h1>Switch Statements</h1>
     <h4>Enter grades: A,B,C,D,F</h4>
-    <form action="main.php" method="get">
+    <form action="index.php" method="get">
         <input type="text" name="grade">
         <input type="submit">
     </form>
@@ -278,7 +278,7 @@
     <br>
     <hr>
     <h1>While Loops</h1>
-    <form action="main.php" method="get">
+    <form action="index.php" method="get">
         <input type="number" name="loop">
         <input type="submit">
     </form>
@@ -294,7 +294,7 @@
     <br>
     <hr>
     <h1>Do while loops</h1>
-    <form action="main.php" method="get">
+    <form action="index.php" method="get">
         <input type="number" name="doWhileLoop"><br>
         <input type="submit">
     </form>
@@ -312,7 +312,7 @@
     <br>
     <hr>
     <h1>For Loops</h1>
-    <form action="main.php" method="get">
+    <form action="index.php" method="get">
         <input type="number" name="forLoop"><br>
         <input type="submit">
     </form>
@@ -328,7 +328,7 @@
    <h1>Objects and classes && Constructers && Object functions</h1>
    <h5>Enter name of the listed author to bring up their most sold book</h5>
    <h4>List of Authors:<br> Jk rowling<br>Tolkien<br>R.R Martin<br>Shakespear</h4><br>
-    <form action="main.php" method="post">
+    <form action="index.php" method="post">
         Name of Author:<input type="text" name="nameOfAuthor">
         <input type="submit"><br>
 
